@@ -61,4 +61,4 @@ test-suite test-cookie-tray
     main-is: Main.hs
     build-depends:
       , cookie-tray
-      , hspec
+      , hspec ^>= 2.9.7 || ^>= 2.10 || ^>= 2.11
