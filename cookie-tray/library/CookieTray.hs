@@ -1,11 +1,13 @@
 module CookieTray
   ( -- * Command
     render,
+    renderLBS,
     ToCommandList (..),
     Command,
     Action (..),
     renderCommand,
-    BinaryCommand (..),
+    BinaryCommand,
+    binaryCommandByteStringLazy,
 
     -- * Tray
     Tray (..),
@@ -50,6 +52,7 @@ import CookieTray.Types
 import Data.Binary.Builder qualified as Binary
 import Data.ByteString qualified as BS
 import Data.ByteString.Char8 qualified as BS.Char8
+import Data.ByteString.Lazy qualified as LBS
 import Data.Functor (Functor, fmap, (<&>))
 import Data.Map (Map)
 import Data.Map qualified as Map
@@ -102,6 +105,9 @@ renderCommand = renderSetCookie . applyToSetCookie
 
 render :: (ToCommandList a) => a -> [BinaryCommand]
 render = fmap renderCommand . toCommandList
+
+renderLBS :: (ToCommandList a) => a -> [LBS.ByteString]
+renderLBS = fmap binaryCommandByteStringLazy . render
 
 ---  Rendering internals  ---
 
