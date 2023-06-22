@@ -10,14 +10,15 @@ to achieve removal.
 
 ---
 
-I currently consider the API to be "experimental" because I don't think its
-chief goals of being convenient and instructive have been satisfied confidently
-enough to consider the library "finished."
+Currently the best way to see how the library is used is to look at the test
+suite.
 
 ---
 
-Currently the best way to see how the library is used is to look at the test
-suite.
+I currently consider the API to be "experimental" because I don't think its
+chief goals of being convenient and instructive have been satisfied confidently
+enough to consider the library "finished." I am open to accepting improvements
+to make the library more convenient to use.
 
 ---
 
