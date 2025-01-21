@@ -1,7 +1,7 @@
 cabal-version: 3.0
 
 name: cookie-tray
-version: 0.0.0.0
+version: 0.0.0.1
 
 synopsis: For serving cookies
 category: Web
@@ -31,9 +31,9 @@ common base
         NoImplicitPrelude
         TypeFamilies
     build-depends:
-      , base ^>= 4.16 || ^>= 4.17 || ^>= 4.18
+      , base ^>= 4.18 || ^>= 4.19
       , binary ^>= 0.8.9
-      , bytestring ^>= 0.11.4
+      , bytestring ^>= 0.11.4 || ^>= 0.12
       , containers ^>= 0.6.5
       , cookie ^>= 0.4.6
       , time ^>= 1.11.1 || ^>= 1.12
